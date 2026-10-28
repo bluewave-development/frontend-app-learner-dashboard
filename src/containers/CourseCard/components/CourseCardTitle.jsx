@@ -24,7 +24,7 @@ export const CourseCardTitle = ({ cardId }) => {
       ) : (
         <a
           href={homeUrl}
-          className="course-card-title"
+          className="course-card-title bw-card-title"
           data-testid="CourseCardTitle"
           onClick={handleTitleClicked}
         >
