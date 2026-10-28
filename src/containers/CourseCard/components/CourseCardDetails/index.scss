@@ -1,3 +1,16 @@
+/*Id  = BWCustom2026*/
 a.course-card-title {
-  color: var(--pgn-color-black);
+  color: var(--pgn-color-primary-base);
+}
+
+/* Id  = BWCustom2026
+Clase exclusiva para el texto*/
+.course-card-title {
+  color: var(--pgn-color-primary-base);
+  font-family: 'Open Sans';
+  font-size: 24px !important;
+}
+
+.course-card-title:hover {
+  color: var(--pgn-color-brand-base);
 }
