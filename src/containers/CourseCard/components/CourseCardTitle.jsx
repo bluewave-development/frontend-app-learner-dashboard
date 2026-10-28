@@ -19,7 +19,8 @@ export const CourseCardTitle = ({ cardId }) => {
   return (
     <h3>
       {disableCourseTitle ? (
-        <span className="course-card-title" data-testid="CourseCardTitle">{courseName}</span>
+        <span className="course-card-title bw-card-title" data-testid="CourseCardTitle">{courseName} editado ltuyu</span>
+
       ) : (
         <a
           href={homeUrl}
@@ -29,6 +30,7 @@ export const CourseCardTitle = ({ cardId }) => {
         >
           {courseName}
         </a>
+
       )}
     </h3>
   );
