@@ -37,6 +37,16 @@ const getLearnerHeaderMenu = (
       items: [
         {
           type: 'item',
+          href: `${getConfig().LMS_BASE_URL}/dashboard`,
+          content: formatMessage(messages.resumeLastWorkshopBW),
+        },
+        {
+          type: 'item',
+          href: `${getConfig().LMS_BASE_URL}/learner-dashboard`,
+          content: formatMessage(messages.dashboard),
+        },
+        {
+          type: 'item',
           href: `${getConfig().ACCOUNT_PROFILE_URL}/u/${authenticatedUser?.username}`,
           content: formatMessage(messages.profile),
         },
@@ -44,6 +54,22 @@ const getLearnerHeaderMenu = (
           type: 'item',
           href: `${getConfig().ACCOUNT_SETTINGS_URL}`,
           content: formatMessage(messages.account),
+        },
+        {
+          type: 'item',
+          href: `${getConfig().BWSDP_URL}`,
+          content: formatMessage(messages.goBackToBlueWaveBW),
+          isActive: true,
+        },
+        {
+          type: 'item',
+          href: `${getConfig().LMS_BASE_URL}/admin`,
+          content: formatMessage(messages.administrationPanelBW),
+        },
+        {
+          type: 'item',
+          href: `${getConfig().STUDIO_BASE_URL}`,
+          content: formatMessage(messages.goToStudioBW),
         },
         ...(getConfig().ORDER_HISTORY_URL ? [{
           type: 'item',
