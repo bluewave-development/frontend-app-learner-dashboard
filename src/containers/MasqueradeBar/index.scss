@@ -34,3 +34,8 @@
     padding: var(--pgn-spacing-spacer-3) var(--pgn-spacing-spacer-4);
   }
 }
+
+
+.line-border-bw {
+  border-bottom: 2px solid var(--pgn-color-primary-base) !important; // Ajusta 2px o 10px según el grosor que busques
+}
