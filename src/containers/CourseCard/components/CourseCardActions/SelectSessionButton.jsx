@@ -16,6 +16,7 @@ export const SelectSessionButton = ({ cardId }) => {
     <ActionButton
       disabled={disableSelectSession}
       onClick={openSessionModal}
+      className="btn-primary-bw"
     >
       {formatMessage(messages.selectSession)}
     </ActionButton>
