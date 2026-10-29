@@ -37,12 +37,12 @@ const getLearnerHeaderMenu = (
       items: [
         {
           type: 'item',
-          href: `${getConfig().LMS_BASE_URL}/dashboard`,
+          href: `${getConfig().LMS_BASE_URL}/learner-dashboard/`,
           content: formatMessage(messages.resumeLastWorkshopBW),
         },
         {
           type: 'item',
-          href: `${getConfig().LMS_BASE_URL}/learner-dashboard`,
+          href: `${getConfig().LMS_BASE_URL}/learner-dashboard/`,
           content: formatMessage(messages.dashboard),
         },
         {
