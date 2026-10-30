@@ -42,7 +42,7 @@ const getLearnerHeaderMenu = (
         },
         {
           type: 'item',
-          href: `${getConfig().LMS_BASE_URL}/learner-dashboard/`,
+          href: `${getConfig().LEARNER_DASHBOARD_URL}`,
           content: formatMessage(messages.dashboard),
         },
         {

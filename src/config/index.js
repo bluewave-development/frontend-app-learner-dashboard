@@ -22,6 +22,7 @@ const configuration = {
   ENABLE_PROGRAMS: process.env.ENABLE_PROGRAMS === 'true',
   NON_BROWSABLE_COURSES: process.env.NON_BROWSABLE_COURSES === 'true',
   BWSDP_URL: process.env.BWSDP_URL,
+  LEARNER_DASHBOARD_URL: process.env.LEARNER_DASHBOARD_URL,
 };
 
 const features = {};
