@@ -8,7 +8,7 @@
   &.not-collapsed {
     padding-top: var(--pgn-spacing-spacer-2);
 
-    & >:first-child {
+    &>:first-child {
       margin-top: var(--pgn-spacing-spacer-5-5);
     }
   }
@@ -16,12 +16,24 @@
 
 @media (--pgn-size-breakpoint-max-width-lg) {
   .sidebar-column {
+
     // grid are inheriting dir="ltr" from the body, so we need to override it
     [dir=ltr] & {
       padding: 0 var(--pgn-spacing-spacer-3);
     }
+
     [dir=rtl] & {
       padding: 0 var(--pgn-spacing-spacer-3);
     }
   }
+}
+
+
+/*Logo del Header TAMAÑA sobre escirot BW*/
+.site-header-desktop .logo {
+  padding: 0px !important;
+}
+
+#root header .logo {
+  height: 3rem !important;
 }
