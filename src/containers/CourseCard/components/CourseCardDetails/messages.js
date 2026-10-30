@@ -13,13 +13,13 @@ const messages = defineMessages({
   },
   courseEnded: {
     id: 'learner-dash.courseCard.CourseCardDetails.courseEnded',
-    description: 'Course ended message on course card.',
-    defaultMessage: 'Course ended {endDate}',
+    description: '[BW Custom]Course ended message on course card.',
+    defaultMessage: 'Workshop ended {endDate}',
   },
   courseEnds: {
     id: 'learner-dash.courseCard.CourseCardDetails.courseEnds',
-    description: 'Course ending message on course card.',
-    defaultMessage: 'Course ends {endDate}',
+    description: '[BW Custom]Course ending message on course card.',
+    defaultMessage: 'Workshop ends {endDate}',
   },
   courseStarts: {
     id: 'learner-dash.courseCard.CourseCardDetails.courseStarts',

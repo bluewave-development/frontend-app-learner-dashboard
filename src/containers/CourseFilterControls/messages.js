@@ -3,8 +3,8 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   courseStatus: {
     id: 'learner-dash.courseListFilters.courseStatus',
-    description: 'course status filter form heading',
-    defaultMessage: 'Course Status',
+    description: '[BW Custom]course status filter form heading',
+    defaultMessage: 'Workshop Status',
   },
   inProgress: {
     id: 'learner-dash.courseListFilters.inProgress',

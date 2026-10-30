@@ -3,8 +3,8 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   beginCourse: {
     id: 'learner-dash.courseCard.actions.beginCourse',
-    description: 'Course card begin-course button text',
-    defaultMessage: 'Begin Course',
+    description: '[BW Custom]Course card begin-course button text',
+    defaultMessage: 'Begin Workshop',
   },
   resume: {
     id: 'learner-dash.courseCard.actions.resume',
@@ -13,8 +13,8 @@ const messages = defineMessages({
   },
   viewCourse: {
     id: 'learner-dash.courseCard.actions.viewCourse',
-    description: 'Course card view-course button text',
-    defaultMessage: 'View Course',
+    description: '[BW Custom]Course card view-course button text',
+    defaultMessage: 'View Workshop',
   },
   selectSession: {
     id: 'learner-dash.courseCard.actions.selectSession',
