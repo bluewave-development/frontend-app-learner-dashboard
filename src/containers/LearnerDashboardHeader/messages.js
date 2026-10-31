@@ -86,26 +86,26 @@ const messages = defineMessages({
     defaultMessage: 'New',
     description: 'The text announcing that an item in the user menu is New',
   },
-  /* Textos personalizados de BW (Blue Wave) */
+  /* [BW Custom] Textos personalizados de BW (Blue Wave) */
   resumeLastWorkshopBW: {
     id: 'learnerVariantDashboard.menu.resumeLastWorkshop.bw.label',
     defaultMessage: 'Resume your last workshop',
-    description: '[BW Custom] The text for the user menu Resume your last workshop navigation link.',
+    description: 'The text for the user menu Resume your last workshop navigation link.',
   },
   goBackToBlueWaveBW: {
     id: 'learnerVariantDashboard.menu.goBackToBlueWave.bw.label',
     defaultMessage: 'Go back to Blue Wave',
-    description: '[BW Custom] The text for the user menu Go back to Blue Wave navigation link.',
+    description: 'The text for the user menu Go back to Blue Wave navigation link.',
   },
   administrationPanelBW: {
     id: 'learnerVariantDashboard.menu.administrationPanel.bw.label',
     defaultMessage: 'Administration panel',
-    description: '[BW Custom] The text for the user menu Administration panel navigation link.',
+    description: 'The text for the user menu Administration panel navigation link.',
   },
   goToStudioBW: {
     id: 'learnerVariantDashboard.menu.goToStudio.bw.label',
     defaultMessage: 'Go to Studio',
-    description: '[BW Custom] The text for the user menu Go to Studio navigation link.',
+    description: 'The text for the user menu Go to Studio navigation link.',
   },
 });
 
