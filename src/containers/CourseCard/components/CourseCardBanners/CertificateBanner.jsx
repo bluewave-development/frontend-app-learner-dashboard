@@ -61,19 +61,20 @@ export const CertificateBanner = ({ cardId }) => {
       // );
     }
     if (isArchived) {
-      return (
-        <Banner variant="warning">
-          {formatMessage(messages.notEligibleForCert)}
-          {'  '}
-          <Hyperlink isInline destination={progressUrl}>{formatMessage(messages.viewGrades)}</Hyperlink>
-        </Banner>
-      );
+      // return (
+      //   <Banner variant="warning">
+      //     {formatMessage(messages.notEligibleForCert)}
+      //     {'  '}
+      //     <Hyperlink isInline destination={progressUrl}>{formatMessage(messages.viewGrades)}</Hyperlink>
+      //   </Banner>
+      // );
     }
-    return (
-      <Banner variant="warning">
-        {formatMessage(messages.certMinGrade, { minPassingGrade })}
-      </Banner>
-    );
+    // return (
+    //   <Banner variant="warning">
+    //     {formatMessage(messages.certMinGrade, { minPassingGrade })}
+    //   </Banner>
+    // );
+    return;
   }
   if (certificate.isEarnedButUnavailable) {
     return (
