@@ -31,7 +31,7 @@ export const CertificateBanner = ({ cardId }) => {
   if (certificate.isRestricted) {
     return (
       <Banner variant="danger">
-        { supportEmail ? formatMessage(messages.certRestricted, { supportEmail: emailLink(supportEmail) }) : formatMessage(messages.certRestrictedNoEmail)}
+        {supportEmail ? formatMessage(messages.certRestricted, { supportEmail: emailLink(supportEmail) }) : formatMessage(messages.certRestrictedNoEmail)}
         {isVerified && '  '}
         {isVerified && (billingEmail ? formatMessage(messages.certRefundContactBilling, { billingEmail: emailLink(billingEmail) }) : formatMessage(messages.certRefundContactBillingNoEmail))}
       </Banner>
@@ -54,11 +54,11 @@ export const CertificateBanner = ({ cardId }) => {
   }
   if (!isPassing) {
     if (isAudit) {
-      return (
-        <Banner>
-          {formatMessage(messages.passingGrade, { minPassingGrade })}
-        </Banner>
-      );
+      // return (
+      //   <Banner>
+      //     {formatMessage(messages.passingGrade, { minPassingGrade })}
+      //   </Banner>
+      // );
     }
     if (isArchived) {
       return (
