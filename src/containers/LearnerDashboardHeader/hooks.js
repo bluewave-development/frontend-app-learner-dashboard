@@ -15,10 +15,19 @@ export const findCoursesNavClicked = (href) => track.findCourses.findCoursesClic
 });
 
 export const useLearnerDashboardHeaderMenu = ({
-  courseSearchUrl, authenticatedUser, exploreCoursesClick,
+  courseSearchUrl,
+  authenticatedUser,
+  exploreCoursesClick,
+  lastWorkshopUrl,
 }) => {
   const { formatMessage } = useIntl();
-  return getLearnerHeaderMenu(formatMessage, courseSearchUrl, authenticatedUser, exploreCoursesClick);
+  return getLearnerHeaderMenu(
+    formatMessage,
+    courseSearchUrl,
+    authenticatedUser,
+    exploreCoursesClick,
+    lastWorkshopUrl,
+  );
 };
 
 export default {

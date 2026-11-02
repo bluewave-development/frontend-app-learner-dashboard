@@ -9,6 +9,7 @@ const getLearnerHeaderMenu = (
   courseSearchUrl,
   authenticatedUser,
   exploreCoursesClick,
+  lastWorkshopUrl,
 ) => ({
   mainMenu: [
     {
@@ -37,7 +38,7 @@ const getLearnerHeaderMenu = (
       items: [
         {
           type: 'item',
-          href: `${getConfig().LMS_BASE_URL}/learner-dashboard/`,
+          href: lastWorkshopUrl || `${getConfig().LEARNER_DASHBOARD_URL || `${getConfig().LMS_BASE_URL}/learner-dashboard/`}`,
           content: formatMessage(messages.resumeLastWorkshopBW),
         },
         {
