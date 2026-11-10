@@ -62,16 +62,18 @@ const getLearnerHeaderMenu = (
           content: formatMessage(messages.goBackToBlueWaveBW),
           isActive: true,
         },
-        {
-          type: 'item',
-          href: `${getConfig().LMS_BASE_URL}/admin`,
-          content: formatMessage(messages.administrationPanelBW),
-        },
-        {
-          type: 'item',
-          href: `${getConfig().STUDIO_BASE_URL}`,
-          content: formatMessage(messages.goToStudioBW),
-        },
+        ...(authenticatedUser?.administrator ? [
+          {
+            type: 'item',
+            href: `${getConfig().LMS_BASE_URL}/admin`,
+            content: formatMessage(messages.administrationPanelBW),
+          },
+          {
+            type: 'item',
+            href: `${getConfig().STUDIO_BASE_URL}`,
+            content: formatMessage(messages.goToStudioBW),
+          },
+        ] : []),
         ...(getConfig().ORDER_HISTORY_URL ? [{
           type: 'item',
           href: getConfig().ORDER_HISTORY_URL,
