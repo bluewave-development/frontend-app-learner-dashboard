@@ -62,12 +62,18 @@ const getLearnerHeaderMenu = (
           content: formatMessage(messages.goBackToBlueWaveBW),
           isActive: true,
         },
-        ...(authenticatedUser?.administrator ? [
+        ...((
+          authenticatedUser?.is_superuser
+          || authenticatedUser?.isSuperuser
+          || (getConfig().ADMIN_USERNAMES || []).includes(authenticatedUser?.username)
+        ) ? [
           {
             type: 'item',
             href: `${getConfig().LMS_BASE_URL}/admin`,
             content: formatMessage(messages.administrationPanelBW),
           },
+        ] : []),
+        ...(authenticatedUser?.administrator ? [
           {
             type: 'item',
             href: `${getConfig().STUDIO_BASE_URL}`,
