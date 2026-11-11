@@ -73,6 +73,7 @@ const getLearnerHeaderMenu = (
             content: formatMessage(messages.administrationPanelBW),
           },
         ] : []),
+        /*En la cookie del LMS en la propiedad administrator tanto como el SU y el staf vienen aqui incluir la propiedad user.is_staff y  is_staff=True, por eso splica para ambos, tanto el staff como el administrator.*/
         ...(authenticatedUser?.administrator ? [
           {
             type: 'item',
