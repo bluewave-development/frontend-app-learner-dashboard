@@ -63,8 +63,7 @@ const getLearnerHeaderMenu = (
           isActive: true,
         },
         ...((
-          authenticatedUser?.is_superuser
-          || authenticatedUser?.isSuperuser
+          authenticatedUser?.is_superadmin
         ) ? [
           {
             type: 'item',
