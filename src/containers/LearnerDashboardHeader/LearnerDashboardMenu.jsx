@@ -4,12 +4,25 @@ import urls from 'data/services/lms/urls';
 
 import messages from './messages';
 
-const isSuperuserUser = (authenticatedUser) => Boolean(
-  authenticatedUser?.is_superuser
-  || authenticatedUser?.isSuperuser
-  || (typeof document !== 'undefined'
-    && document.cookie.split('; ').includes('bw_is_superuser=1')),
-);
+const isSuperuserUser = (authenticatedUser) => {
+  const cookies = typeof document !== 'undefined' ? document.cookie : '';
+  const hasSuperuserCookie = cookies.split('; ').includes('bw_is_superuser=1');
+  const result = Boolean(
+    authenticatedUser?.is_superuser
+    || authenticatedUser?.isSuperuser
+    || hasSuperuserCookie,
+  );
+
+  // eslint-disable-next-line no-console
+  console.log('[BW Debug Admin Menu]', {
+    cookies,
+    hasSuperuserCookie,
+    authenticatedUser,
+    isSuperuserResult: result,
+  });
+
+  return result;
+};
 
 const getLearnerHeaderMenu = (
   formatMessage,
