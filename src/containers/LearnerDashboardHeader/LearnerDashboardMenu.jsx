@@ -4,25 +4,28 @@ import urls from 'data/services/lms/urls';
 
 import messages from './messages';
 
-const isSuperuserUser = (authenticatedUser) => {
-  const cookies = typeof document !== 'undefined' ? document.cookie : '';
-  const hasSuperuserCookie = cookies.split('; ').includes('bw_is_superuser=1');
-  const result = Boolean(
-    authenticatedUser?.is_superuser
-    || authenticatedUser?.isSuperuser
-    || hasSuperuserCookie,
-  );
-
-  // eslint-disable-next-line no-console
-  console.log('[BW Debug Admin Menu]', {
-    cookies,
-    hasSuperuserCookie,
-    authenticatedUser,
-    isSuperuserResult: result,
-  });
-
-  return result;
+const getJwtSuperuserFlag = () => {
+  try {
+    if (typeof document === 'undefined') return false;
+    const match = document.cookie.match(/(?:^|;\s*)edx-jwt-cookie-header-payload=([^;]+)/);
+    if (!match) return false;
+    const parts = decodeURIComponent(match[1]).split('.');
+    if (parts.length < 2) return false;
+    const base64 = parts[1].replace(/-/g, '+').replace(/_/g, '/');
+    const padded = base64.padEnd(base64.length + ((4 - (base64.length % 4)) % 4), '=');
+    const payload = JSON.parse(window.atob(padded));
+    return Boolean(payload?.superuser || payload?.is_superuser);
+  } catch (e) {
+    return false;
+  }
 };
+
+const isSuperuserUser = (authenticatedUser) => Boolean(
+  authenticatedUser?.is_superuser
+  || authenticatedUser?.isSuperuser
+  || authenticatedUser?.superuser
+  || getJwtSuperuserFlag(),
+);
 
 const getLearnerHeaderMenu = (
   formatMessage,
