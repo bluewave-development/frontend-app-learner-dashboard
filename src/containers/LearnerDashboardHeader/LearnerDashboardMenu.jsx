@@ -4,6 +4,13 @@ import urls from 'data/services/lms/urls';
 
 import messages from './messages';
 
+const isSuperuserUser = (authenticatedUser) => Boolean(
+  authenticatedUser?.is_superuser
+  || authenticatedUser?.isSuperuser
+  || (typeof document !== 'undefined'
+    && document.cookie.split('; ').includes('bw_is_superuser=1')),
+);
+
 const getLearnerHeaderMenu = (
   formatMessage,
   courseSearchUrl,
@@ -62,9 +69,7 @@ const getLearnerHeaderMenu = (
           content: formatMessage(messages.goBackToBlueWaveBW),
           isActive: true,
         },
-        ...((
-          authenticatedUser?.is_superadmin
-        ) ? [
+        ...(isSuperuserUser(authenticatedUser) ? [
           {
             type: 'item',
             href: `${getConfig().LMS_BASE_URL}/admin`,
