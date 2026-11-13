@@ -65,7 +65,6 @@ const getLearnerHeaderMenu = (
         ...((
           authenticatedUser?.is_superuser
           || authenticatedUser?.isSuperuser
-          || (getConfig().ADMIN_USERNAMES || []).includes(authenticatedUser?.username)
         ) ? [
           {
             type: 'item',
