@@ -96,7 +96,7 @@ const getLearnerHeaderMenu = (
         ...(authenticatedUser?.administrator ? [
           {
             type: 'item',
-            href: `${getConfig().STUDIO_BASE_URL}login/edx-oauth2/?next=/`,
+            href: `${getConfig().STUDIO_BASE_URL}/login/edx-oauth2/?next=/`,
             content: formatMessage(messages.goToStudioBW),
           },
         ] : []),
