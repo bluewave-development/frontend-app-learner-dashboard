@@ -8,8 +8,8 @@ const messages = defineMessages({
   },
   dropdownAlt: {
     id: 'learner-dash.courseCardMenu.dropdownAlt',
-    description: 'Course action menu alt-text',
-    defaultMessage: 'Course actions dropdown',
+    description: '[BW Custom]Course action menu alt-text',
+    defaultMessage: 'Workshop actions dropdown',
   },
   emailSettings: {
     id: 'learner-dash.courseCardMenu.emailSettings',

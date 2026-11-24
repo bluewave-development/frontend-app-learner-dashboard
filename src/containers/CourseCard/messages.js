@@ -3,8 +3,8 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   bannerAlt: {
     id: 'learner-dash.courseCard.bannerAlt',
-    description: 'Course card banner alt-text',
-    defaultMessage: 'Course thumbnail',
+    description: '[BW Custom]Course card banner alt-text',
+    defaultMessage: 'Workshop thumbnail',
   },
   verifiedBanner: {
     id: 'learner-dash.courseCard.verifiedBanner',

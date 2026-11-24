@@ -9,8 +9,8 @@ const messages = defineMessages({
   },
   description: {
     id: 'learner-dash.relatedPrograms.description',
-    description: 'Description for related settings modal',
-    defaultMessage: 'Are you looking to expand your knowledge?  Enrolling in a Program lets you take a series of courses in the subject that you\'re interested in',
+    description: '[BW Custom]Description for related settings modal',
+    defaultMessage: 'Are you looking to expand your knowledge?  Enrolling in a Program lets you take a series of workshops in the subject that you\'re interested in',
   },
 });
 

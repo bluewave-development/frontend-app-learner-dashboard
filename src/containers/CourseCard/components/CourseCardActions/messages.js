@@ -9,7 +9,7 @@ const messages = defineMessages({
   resume: {
     id: 'learner-dash.courseCard.actions.resume',
     description: 'Course card resume button text',
-    defaultMessage: 'Resume',
+    defaultMessage: 'Resume Workshop',
   },
   viewCourse: {
     id: 'learner-dash.courseCard.actions.viewCourse',

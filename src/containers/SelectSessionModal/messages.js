@@ -14,8 +14,8 @@ const messages = defineMessages({
   },
   changeOrLeaveHint: {
     id: 'learner-dash.selectSession.changeOrLeaveHint',
-    description: 'Hint for session that allow leave option',
-    defaultMessage: 'When you change to a different session any course progress or grades from your current session will be lost.',
+    description: '[BW Custom]Hint for session that allow leave option',
+    defaultMessage: 'When you change to a different session any workshop progress or grades from your current session will be lost.',
   },
   selectSessionHint: {
     id: 'learner-dash.selectSession.selectSessionHint',

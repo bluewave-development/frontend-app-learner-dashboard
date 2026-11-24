@@ -1,8 +1,8 @@
 export const messages = {
   courses: {
     id: 'learnerDashboard.programCard.courses',
-    defaultMessage: '{numCourses} Courses',
-    description: 'Number of courses in a program, displayed at the bottom of program card',
+    defaultMessage: '{numCourses} Workshops',
+    description: '[BW Custom]Number of courses in a program, displayed at the bottom of program card',
   },
   duration: {
     id: 'learnerDashboard.programCard.duration',

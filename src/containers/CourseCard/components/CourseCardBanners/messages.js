@@ -3,13 +3,13 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   auditAccessExpired: {
     id: 'learner-dash.courseCard.banners.auditAccessExpired',
-    description: 'Audit access expiration banner message',
-    defaultMessage: 'Your audit access to this course has expired.',
+    description: '[BW Custom]Audit access expiration banner message',
+    defaultMessage: 'Your audit access to this workshop has expired.',
   },
   findAnotherCourse: {
     id: 'learner-dash.courseCard.banners.findAnotherCourse',
-    description: 'Action prompt taking learners to course exploration',
-    defaultMessage: 'Find another course',
+    description: '[BW Custom]Action prompt taking learners to course exploration',
+    defaultMessage: 'Find another workshop',
   },
   certRestricted: {
     id: 'learner-dash.courseCard.banners.certificateRestricted',
@@ -33,8 +33,8 @@ const messages = defineMessages({
   },
   passingGrade: {
     id: 'learner-dash.courseCard.banners.passingGrade',
-    description: 'Message to learners with minimum passing grade for the course',
-    defaultMessage: 'Grade required to pass the course: {minPassingGrade}\u200f%',
+    description: '[BW Custom]Message to learners with minimum passing grade for the course',
+    defaultMessage: 'Grade required to pass the workshop: {minPassingGrade}\u200f%',
   },
   notEligibleForCert: {
     id: 'learner-dash.courseCard.banners.notEligibleForCert',
@@ -73,13 +73,13 @@ const messages = defineMessages({
   },
   entitlementUnavailable: {
     id: 'learner-dash.courseCard.banners.entitlementUnavailable',
-    description: 'Entitlement course message when no sessions are available',
-    defaultMessage: 'There are no sessions available at the moment.  The course team will create new sessions soon.  If no sessions appear, please contact {emailLink} for information.',
+    description: '[BW Custom]Entitlement course message when no sessions are available',
+    defaultMessage: 'There are no sessions available at the moment.  The workshop team will create new sessions soon.  If no sessions appear, please contact {emailLink} for information.',
   },
   entitlementExpiringSoon: {
     id: 'learner-dash.courseCard.banners.entitlementExpiringSoon',
-    description: 'Entitlement course message when the entitlement is expiring soon.',
-    defaultMessage: 'You must {selectSessionButton} by {changeDeadline} to access the course.',
+    description: '[BW Custom]Entitlement course message when the entitlement is expiring soon.',
+    defaultMessage: 'You must {selectSessionButton} by {changeDeadline} to access the workshop.',
   },
   entitlementExpired: {
     id: 'learner-dash.courseCard.banners.entitlementExpired',
@@ -93,13 +93,13 @@ const messages = defineMessages({
   },
   prerequisitesNotMet: {
     id: 'learner-dash.courseCard.banners.prerequisitesNotMet',
-    description: 'Message to learners with unmet prerequisites',
-    defaultMessage: 'You can\'t access this course just yet because you have not met the pre-requisites.',
+    description: '[BW Custom]Message to learners with unmet prerequisites',
+    defaultMessage: 'You can\'t access this workshop just yet because you have not met the pre-requisites.',
   },
   courseHasNotStarted: {
     id: 'learner-dash.courseCard.banners.courseHasNotStarted',
-    description: 'Course has not started message',
-    defaultMessage: 'You can\'t access this course just yet because the course hasn\'t started yet. The course will start on {startDate}.',
+    description: '[BW Custom]Course has not started message',
+    defaultMessage: 'You can\'t access this workshop just yet because the workshop hasn\'t started yet. The workshop will start on {startDate}.',
   },
 });
 

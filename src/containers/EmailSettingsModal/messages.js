@@ -4,23 +4,23 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   header: {
     id: 'learner-dash.emailSettings.header',
-    description: 'Header for email settings modal',
-    defaultMessage: 'Receive course emails?',
+    description: '[BW Custom]Header for email settings modal',
+    defaultMessage: 'Receive workshop emails?',
   },
   emailsOff: {
     id: 'learner-dash.emailSettings.emailsOff',
-    description: 'Toggle text for email settings modal when email is disabled',
-    defaultMessage: 'Course emails are off',
+    description: '[BW Custom]Toggle text for email settings modal when email is disabled',
+    defaultMessage: 'Workshop emails are off',
   },
   emailsOn: {
     id: 'learner-dash.emailSettings.emailsOn',
-    description: 'Toggle text for email settings modal when email is enabled',
-    defaultMessage: 'Course emails are on',
+    description: '[BW Custom]Toggle text for email settings modal when email is enabled',
+    defaultMessage: 'Workshop emails are on',
   },
   description: {
     id: 'learner-dash.emailSettings.description',
-    description: 'Description for email settings modal',
-    defaultMessage: 'Course emails include important information about your course from instructors.',
+    description: '[BW Custom]Description for email settings modal',
+    defaultMessage: 'Workshop emails include important information about your workshop from instructors.',
   },
   nevermind: {
     id: 'learner-dash.emailSettings.nevermind',

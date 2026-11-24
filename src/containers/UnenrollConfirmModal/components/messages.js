@@ -9,8 +9,8 @@ const messages = defineMessages({
   },
   confirmText: {
     id: 'learner-dash.unenrollConfirm.confirm.text',
-    description: 'Text for confirm unenroll modal',
-    defaultMessage: 'Are you sure you want to unenroll from the course {courseTitle} ?',
+    description: '[BW Custom]Text for confirm unenroll modal',
+    defaultMessage: 'Are you sure you want to unenroll from the workshop {courseTitle} ?',
   },
   confirmCancel: {
     id: 'learner-dash.unenrollConfirm.confirm.cancel',
@@ -44,8 +44,8 @@ const messages = defineMessages({
   },
   finishText: {
     id: 'learner-dash.unenrollConfirm.confirm.finish.text',
-    description: 'Text for unenroll finish modal',
-    defaultMessage: 'You have been unenrolled from the course {courseTitle}',
+    description: '[BW Custom]Text for unenroll finish modal',
+    defaultMessage: 'You have been unenrolled from the workshop {courseTitle}',
   },
   finishReturn: {
     id: 'learner-dash.unenrollConfirm.confirm.finish.return',

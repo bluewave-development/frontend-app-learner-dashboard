@@ -23,8 +23,8 @@ const messages = defineMessages({
   },
   courseStarts: {
     id: 'learner-dash.courseCard.CourseCardDetails.courseStarts',
-    description: 'Course start date message on course card.',
-    defaultMessage: 'Course starts {startDate}',
+    description: '[BW Custom]Course start date message on course card.',
+    defaultMessage: 'Workshop starts {startDate}',
   },
   unknownProviderName: {
     id: 'learner-dash.courseCard.CourseCardDetails.unknownProviderName',

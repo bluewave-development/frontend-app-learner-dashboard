@@ -8,18 +8,18 @@ const messages = defineMessages({
   },
   exploreCoursesPrompt: {
     id: 'Dashboard.NoCoursesView.exploreCoursesPrompt',
-    defaultMessage: 'Explore our courses to add them to your dashboard.',
-    description: 'Prompt user to explore more courses',
+    defaultMessage: 'Explore our workshops to add them to your dashboard.',
+    description: '[BW Custom]Prompt user to explore more courses',
   },
   exploreCoursesButton: {
     id: 'Dashboard.NoCoursesView.exploreCoursesButton',
-    defaultMessage: 'Explore courses',
-    description: 'Button to explore more courses',
+    defaultMessage: 'Explore workshops',
+    description: '[BW Custom]Button to explore more courses',
   },
   bannerAlt: {
     id: 'Dashboard.NoCoursesView.bannerAlt',
-    defaultMessage: 'No Courses view banner',
-    description: 'No Courses view basnner',
+    defaultMessage: 'No Workshops view banner',
+    description: '[BW Custom]No Courses view basnner',
   },
 });
 
