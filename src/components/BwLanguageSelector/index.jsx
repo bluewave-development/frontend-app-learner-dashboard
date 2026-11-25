@@ -20,22 +20,46 @@ export const BwLanguageSelector = () => {
   const cookieName = getConfig().LANGUAGE_PREFERENCE_COOKIE_NAME || 'openedx-language-preference';
   const currentLang = cookies.get(cookieName) || intl.locale || 'en';
 
+  // Si existe una cookie host-only duplicada en apps.* junto con la cookie compartida del LMS,
+  // eliminar la cookie host-only local para que prevalezca siempre el idioma compartido.
+  React.useEffect(() => {
+    const rawCookies = document.cookie.split(';').map((c) => c.trim());
+    const langCookies = rawCookies.filter((c) => c.startsWith(`${cookieName}=`));
+    if (langCookies.length > 1) {
+      cookies.remove(cookieName, { path: '/' });
+      window.location.reload();
+    }
+  }, [cookieName]);
+
   const handleLanguageChange = (event) => {
     const newLanguage = event.target.value;
-    const hostname = window.location.hostname;
-    // Dominio raíz compartido entre LMS y MFEs (ej. .academyv21.bluewavesdp.com)
-    const rootDomain = hostname.startsWith('apps.') ? hostname.replace(/^apps/, '') : hostname;
-
-    // 1. Guardar cookie en el host actual y en el dominio compartido de Open edX
-    cookies.set(cookieName, newLanguage, { path: '/' });
-    if (hostname !== 'localhost') {
-      cookies.set(cookieName, newLanguage, { path: '/', domain: rootDomain });
+    const { hostname } = window.location;
+    // Dominio raíz compartido entre LMS y MFEs (ej. .bwaulmo.plenumsoftamericas.com / .academyv21.bluewavesdp.com)
+    let rootDomain = '';
+    if (hostname !== 'localhost' && hostname.includes('.')) {
+      if (hostname.startsWith('apps.')) {
+        rootDomain = hostname.replace(/^apps\./, '.');
+      } else if (hostname.startsWith('studio.')) {
+        rootDomain = hostname.replace(/^studio\./, '.');
+      } else {
+        rootDomain = `.${hostname}`;
+      }
     }
 
-    // 2. Guardar respaldo en sessionStorage
+    // 1. Eliminar cookie host-only local (en apps.*) para que no bloquee la cookie compartida del LMS
+    cookies.remove(cookieName, { path: '/' });
+
+    // 2. Guardar una única cookie en el dominio compartido entre LMS y todos los MFEs
+    if (rootDomain) {
+      cookies.set(cookieName, newLanguage, { path: '/', domain: rootDomain, maxAge: 31536000 });
+    } else {
+      cookies.set(cookieName, newLanguage, { path: '/', maxAge: 31536000 });
+    }
+
+    // 3. Guardar respaldo en sessionStorage
     window.sessionStorage.setItem(cookieName, newLanguage);
 
-    // 3. Recargar página para aplicar las traducciones
+    // 4. Recargar página para aplicar las traducciones
     window.location.reload();
   };
 
